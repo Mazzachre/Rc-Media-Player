@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="main.qml">ui/qml/main.qml</file>
+        <file alias="Icons.ttf">ui/fonts/themify.ttf</file>
+        <file alias="TransportControls.qml">ui/qml/TransportControls.qml</file>
+		<file alias="AudioMenu.qml">ui/qml/AudioMenu.qml</file>
+        <file alias="VideoMenu.qml">ui/qml/VideoMenu.qml</file>
+        <file alias="SubtitleMenu.qml">ui/qml/SubtitleMenu.qml</file>
+    </qresource>
+</RCC>
