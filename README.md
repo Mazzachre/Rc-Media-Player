@@ -9,7 +9,7 @@ Commands supported:
   If string, will try to load the file or connect to the path based on the Url type specifier. file:// is prefered for loading files, but not nessecary.
     dvd:// should be used for iso images, no dvd navigation is availablem it will play the longest available title.
   If object, the object must contain the key "movie" that specifies the media file to play and can contain any of the following keys that will be set from the start of playback:
-    videoTrack, audioTrack, subtitleTrack, position, volume, playlist. See the following for descriptions.
+    videoTrack, audioTrack, subtitleTrack, position, volume, playlist. See the following for descriptions. If playback is not already happening, the keys by themselves will not have any effect, so if any of them are desired for playback from the beginning they should be specified in the play object. After the first position object have been recieved the commands can be used to modify playback.
 **videoTrack**: integer, specify which video track to select for playback when multiple tracks are available.
 **audioTrack**: integer, specify which audio track to select for playback when multiple tracks are available.
 **subtitleTrack**: integer | string, if string, loads specified file as subtitle, if integer, select specified embedded subtitle track.
