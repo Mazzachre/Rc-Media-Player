@@ -68,6 +68,7 @@ void rc::app::App::connectSignals() {
 	connect(m_socketServer, &rc::socket::SocketServer::setAudioTrack, player, &rc::mpv::MpvPlayer::changeAudioTrack);
 	connect(m_socketServer, &rc::socket::SocketServer::setSubtitleTrack, player, &rc::mpv::MpvPlayer::changeSubtitleTrack);
 	connect(m_socketServer, &rc::socket::SocketServer::setVolume, player, &rc::mpv::MpvPlayer::changeVolume);
+	connect(m_socketServer, &rc::socket::SocketServer::setFullScreen, rc::ui::UiState::instance(), &rc::ui::UiState::setFullScreen);
 
 	connect(player, &rc::mpv::MpvPlayer::audioTrackChanged, m_socketServer, &rc::socket::SocketServer::audioTrackChanged);
 	connect(player, &rc::mpv::MpvPlayer::videoTrackChanged, m_socketServer, &rc::socket::SocketServer::videoTrackChanged);

@@ -43,6 +43,9 @@ public:
 
 	bool hasVolume();
 	uint volume();
+	
+	bool hasFullScreen();
+	bool fullScreen();
 };
 
 }}

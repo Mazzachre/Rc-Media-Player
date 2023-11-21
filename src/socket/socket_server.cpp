@@ -53,6 +53,7 @@ void rc::socket::SocketServer::handleClientMessage(const QString &message) {
 			if (parser.hasVideoTrack()) Q_EMIT setVideoTrack(parser.videoTrack());
 			if (parser.hasSubtitleTrack()) Q_EMIT setSubtitleTrack(parser.subtitleTrack());
 			if (parser.hasVolume()) Q_EMIT setVolume(parser.volume());
+			if (parser.hasFullScreen()) Q_EMIT setFullScreen(parser.fullScreen());
 			if (parser.stop()) Q_EMIT stopMovie();
 		}
 	} else {

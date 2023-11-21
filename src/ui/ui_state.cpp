@@ -77,3 +77,7 @@ bool rc::ui::UiState::isFullScreen() const {
 	}
 	return false;
 }
+
+void rc::ui::UiState::setFullScreen(bool fullScreen) {
+	m_window->setWindowState(fullScreen ? Qt::WindowFullScreen : Qt::WindowNoState);
+}

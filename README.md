@@ -18,6 +18,7 @@ Commands supported:
 **playlist**: boolean, set the playlist controls visible in the UI if true or hides them if false.
 **pause**: boolean, pauses or resumes playback. Value of true pauses, value of false resumes.
 **stop**: (ignored), stops current playback and hides the UI.
+**fullScreen**: boolean, sets full screen mode for player.
 
 The player will write the following json objects back to the client:
 

@@ -45,6 +45,13 @@ rc::socket::CommandParser::CommandParser(const QJsonDocument& doc) {
 				} else {
 					m_parsed["error"] = "Invalid type for pause";
 				}
+			} else if (key.compare("fullScreen") == 0) {
+				QJsonValue value = doc.object()["fullScreen"];
+				if (value.isBool()) {
+					m_parsed["fullscreen"] = value.toBool();
+				} else {
+					m_parsed["error"] = "Invalid type for full screen";
+				}
 			} else if (key.compare("audioTrack") == 0) {
 				QJsonValue value = doc.object()["audioTrack"];
 				if (value.isDouble()) {
@@ -167,4 +174,12 @@ bool rc::socket::CommandParser::hasVolume() {
 
 uint rc::socket::CommandParser::volume() {
 	return m_parsed.value("volume").toUInt();
+}
+
+bool rc::socket::CommandParser::hasFullScreen() {
+	return m_parsed.contains("fullscreen");	
+}
+
+bool rc::socket::CommandParser::fullScreen() {
+	return m_parsed.value("fullscreen").toBool();	
 }

@@ -32,6 +32,7 @@ public:
 	Q_SIGNAL void setAudioTrack(uint subtitle);
 	Q_SIGNAL void setSubtitleTrack(QVariant subtitle);
 	Q_SIGNAL void setVolume(uint volume);
+	Q_SIGNAL void setFullScreen(bool fullScreen);
 
 	Q_SLOT void videoTrackChanged(const QVariant& track) const;
 	Q_SLOT void audioTrackChanged(const QVariant& track) const;

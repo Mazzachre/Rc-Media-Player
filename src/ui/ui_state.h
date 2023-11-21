@@ -37,6 +37,7 @@ public:
 	Q_SIGNAL void showControlsUpdate() const;
 
     Q_SLOT void toggleFullScreen();
+    Q_SLOT void setFullScreen(bool fullScreen);
 	bool isFullScreen() const;
 	Q_SIGNAL void fullScreenUpdate() const;
 };
